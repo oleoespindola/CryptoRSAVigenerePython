@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>PyCripto</title>
+
+    <!-- Bootstrap e CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Ícone da página -->
+    <link rel="shortcut icon" href="https://media.giphy.com/media/LMt9638dO8dftAjtco/giphy.gif" type="image/x-icon">
+</head>
+
+<body class="bg-secondary">
+
+    <!--Título e barra de navegação-->
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-link" href="/">
+          <img src="https://media.giphy.com/media/LMt9638dO8dftAjtco/giphy.gif" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+          <strong>PyCripto</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link text-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link text-link active" href="#">Método xxxx</a>
+            <a class="nav-link text-link active" href="/rsa">Método RSA</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+
+        <!-- section of input/APP -->
+        <section>
+            {% block body %}
+
+            {% endblock %}
+        </section>
+
+    </main>
+
+    <!-- Script do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<div class="container">
+    <!-- Título -->
+    <div class="container text-center p-3">
+        <h1 class="text-center text-white fs-3">Método RSA</h1>
+    </div>
+
+    <!-- Sessão de criptografia -->
+    <section class="container text-left p-1">
+        <form action="/rsa/criptografar" method="post">
+            <div> <!--Input do usuário para crioptografar-->
+                <div class="form-floating">
+                    <input type="text" name="letters" class="form-control" placeholder="Seu texto aqui..." id="floatingTextarea2" style="height: 100px"></input>
+                    <label for="floatingTextarea2">Seu texto aqui...</label>
+                  </div>
+                <input type="submit" value="Criptografar" class="btn btn-warning p-2 m-2">
+            </div>
+        </form>
+    </section>
+
+        <!-- Sessão de descriptografia -->
+        <section class="container text-left p-1">
+            <form action="/rsa/descriptografar" method="post">
+                <div> <!--Input do usuário para crioptografar-->
+                    <div class="form-floating">
+                        <input type="text" name="numbers" class="form-control" placeholder="Seu texto aqui..." id="floatingTextarea1" style="height: 100px"></input>
+                        <label for="floatingTextarea1">Seu texto aqui...</label>
+                      </div>
+                    <input type="submit" value="DesCriptografar" class="btn btn-success p-2 m-2">
+                </div>
+            </form>
+        </section>
+
+        <p>{{ c_text }}</p>
+        <p>{{ d_text }}</p>
+</div>
+
+{% endblock %}
