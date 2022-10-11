@@ -79,7 +79,7 @@ def criptografar(text:str, key_one:int, key_two:int) -> set:
     '''
         Criptografa o texto por caractere.
         =============================================
-        Fórmula da criptografia: 'x' = ('Número da letra ** '2ª Chave pública') % '1ª Chave pública '.
+        Fórmula da criptografia: 'x' = ('Número da letra ** '2ª Chave pública') % '1ª Chave pública'.
 
     '''
     tabela_ascii
