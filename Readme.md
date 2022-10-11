@@ -4,35 +4,43 @@ O projeto disponibiliza para o usuário duas formas de criptografia diferentes, 
 
 ## 📒 Sumário
 
- * [Template](#💻-Template)
-    * [template/index.html](##🖱️-template/index.html)
-    * [template/_home.html](##🖱️-template/_home.html)
-    * [template/_rsa.py](##🖱️-template/_rsa.py)
- * [Método RSA](#🔐-Método-RSA)
-    * [Escolha das primeiras chaves privadas](##🔑-Escolha-das-primeiras-chaves-privadas)
-    * [Definindo as chaves públicas](##🔑-Definindo-as-chaves-públicas)
-    * [Definindo a terceira chave privada](##🔑-Definindo-a-terceira-chave-privada)
-    * [Encriptação](##🔑-Encriptação)
-    * [Decriptação](##🔑-Decriptação)
-# 💻 Template
+ * [Template](#-template)
+    * [template/index.html](#-templateindexhtml)
+    * [template/_home.html](#-template_homehtml)
+    * [template/_rsa.py](#-template_rsapy)
+ * [Método RSA](#-escolha-das-primeiras-chaves-privadas)
+    * [Escolha das primeiras chaves privadas](#-método-rsa)
+    * [Definindo as chaves públicas](#-definindo-as-chaves-públicas)
+    * [Definindo a terceira chave privada](#-definindo-a-terceira-chave-privada)
+    * [Encriptação](#-encriptação)
+    * [Decriptação](#-decriptação)
+
+---
+
+# 📑 Template
 
 O arquivo *app.py* é a raiz do projeto, responsável por dar início a aplicação, utilizando a biblioteca *flask* para rodar aplicação em uma página html.
 
-## 🖱️ template/index.html
+
+## 📑 template/index.html
 
 É o template base da aplicação. Contém a barra de navegação e o seu main será substituído por outros templates que serão chamados com os decoradores. 
 
-## 🖱️ template/_home.html
+
+## 📑 template/_home.html
 
 Apresenta, no main da aplicação, uma mensagem de boas vindas. 
 
-## 🖱️ template/_rsa.py
+
+## 📑 template/_rsa.py
 
 Irá utilizar os decoradores `rsa/criptografar`  e `rsa/descriptografar`  para criptografar e descriptografar um texto digitado pelo usuário.
 
-# 🔐 Método RSA
+
+# 🔑 Método RSA
 
 Utiliza um conjunto de chaves assimétricas, sendo duas chaves públicas e três chaves privadas. O código das funções utilizadas neste método estão no arquivo *_rsa.py* na pasta raiz do projeto. 
+
 
 ## 🔑 Escolha das primeiras chaves privadas
 
@@ -44,6 +52,7 @@ No código chamaremos essa duas chaves de:
 key_one = 883     # 1ª Chave privada
 key_two = 997     # 2ª Chave privada
 ```
+
 
 ## 🔑 Definindo as chaves públicas
 
@@ -61,13 +70,16 @@ A segunda chave pública também é arbitrária, mas precisa obedecer as seguint
 
 A função *public_key()* será responsável por retornar uma lista com as duas chaves públicas de acordo com a regras acima. 
 
+
 ## 🔑 Definindo a terceira chave privada
 
 A terceira chave privada será o inverso multiplicativo modular da segunda chave pública. No código, a function responsável por retornar esse valor será *private_key()*
 
+
 ## 🔑 Encriptação
 
 A formula da encriptação é *'x' = ('Número da letra ** '2ª Chave pública') % '1ª Chave pública’* e será dada pela function *criptografar()*
+
 
 ## 🔑 Decriptação
 
