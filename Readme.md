@@ -6,12 +6,12 @@ O projeto disponibiliza para o usuário duas formas de criptografia diferentes, 
 ## 📒 Sumário
 
  * [Template](#-template)
-    * [template/index.html](#-templateindexhtml)
-    * [template/_home.html](#-template_homehtml)
-    * [template/_rsa.py](#-template_rsapy)
- * [Cifra de Vigenère](#-Cifra_de_Vigenère)
-    * [Construção da tabula recta](#-Construção_da_tabula_recta)
-    * [Encriptação e Descriptação de Virgenère](#-Encriptação_e_Descriptação_de_Virgenère)
+    * [template/index.html](#%EF%B8%8F-templateindexhtml)
+    * [template/_home.html](#%EF%B8%8F-template_homehtml)
+    * [template/_rsa.py](#%EF%B8%8F-template_rsapy)
+ * [Cifra de Vigenère](#-cifra-de-vigenère)
+    * [Construção da tabula recta](#-construção-da-tabula-recta)
+    * [Encriptação e Descriptação de Virgenère](#-encriptação-e-descriptação-de-virgenère)
  * [Método RSA](#-escolha-das-primeiras-chaves-privadas)
     * [Escolha das primeiras chaves privadas](#-método-rsa)
     * [Definindo as chaves públicas](#-definindo-as-chaves-públicas)
