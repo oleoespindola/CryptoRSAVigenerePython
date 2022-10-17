@@ -2,7 +2,7 @@ import html
 from flask import Flask, render_template, request
 
 from _rsa import rsa_encrypt, rsa_decrypt, public_key
-from _Virgenere import virgenere_encrypt, virgenere_decrypt
+from _vigenere import vigerene_encrypt, vigerene_decrypt
 
 app = Flask(__name__)
 
@@ -15,37 +15,37 @@ def home() -> 'html':
     return render_template('_home.html', menu_home='active')
 
 
-# ===VIRGENERE=====================================================================================
+# ===vigerene=====================================================================================
 
 
-@app.route('/virgenere')
-def virgenere() -> 'html':
-    '''Retorna um template para que o usuário teste o modelo de criptografia Virgenere'''
-    return render_template('_virgenere.html', menu_virgenere='active', text='')
+@app.route('/vigenere')
+def vigenere() -> 'html':
+    '''Retorna um template para que o usuário teste o modelo de criptografia vigerene'''
+    return render_template('_vigerene.html', menu_vigerene='active', text='')
 
 
-@app.route('/virgenere/criptografar', methods=['GET', 'POST'])
-def virgenere_criptografar() -> 'html':
+@app.route('/vigenere/criptografar', methods=['GET', 'POST'])
+def vigerene_criptografar() -> 'html':
     '''Criptografa o texto fornecido pelo usuário'''
     
     key = str(request.form.get('key_encrypt')).upper()
     text = str(request.form.get('decrypt_text')).upper()
 
-    encrypted_text = virgenere_encrypt(text=text, key_word=key)
+    encrypted_text = vigerene_encrypt(text=text, key_word=key)
 
-    return render_template('_virgenere.html', menu_virgenere='active', encrypted_text=encrypted_text, key_word=key)
+    return render_template('_vigerene.html', menu_vigerene='active', encrypted_text=encrypted_text, key_word=key)
 
 
-@app.route('/virgenere/descriptografar', methods=['GET', 'POST'])
-def virgenere_descriptografar() -> 'html':
+@app.route('/vigenere/descriptografar', methods=['GET', 'POST'])
+def vigerene_descriptografar() -> 'html':
     '''Criptografa o texto fornecido pelo usuário'''
     
     key = str(request.form.get('key_decrypt'))
     text = str(request.form.get('encrypt_text'))
 
-    decrypted_text = virgenere_decrypt(text=text, key_word=key)
+    decrypted_text = vigerene_decrypt(text=text, key_word=key)
 
-    return render_template('_virgenere.html', menu_virgenere='active', decrypted_text=decrypted_text, key_word=key)
+    return render_template('_vigerene.html', menu_vigerene='active', decrypted_text=decrypted_text, key_word=key)
 
 
 # ===RSA===========================================================================================

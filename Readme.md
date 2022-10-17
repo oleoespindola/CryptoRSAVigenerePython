@@ -1,6 +1,6 @@
 # <img src="https://media.giphy.com/media/LMt9638dO8dftAjtco/giphy.gif" width="30px"> PyCripto
 
-O projeto disponibiliza para o usuário duas formas de criptografia diferentes, **cifra de Virgenère** e o método **RSA**.  
+O projeto disponibiliza para o usuário duas formas de criptografia diferentes, **cifra de Vigenère** e o método **RSA**.  
 <br>
 
 ## 📒 Sumário
@@ -11,7 +11,7 @@ O projeto disponibiliza para o usuário duas formas de criptografia diferentes, 
     * [template/_rsa.py](#%EF%B8%8F-template_rsapy)
  * [Cifra de Vigenère](#-cifra-de-vigenère)
     * [Construção da tabula recta](#-construção-da-tabula-recta)
-    * [Encriptação e Descriptação de Virgenère](#-encriptação-e-descriptação-de-virgenère)
+    * [Encriptação e decriptação de Virgenère](#-encriptação-e-decriptação-de-virgenère)
  * [Método RSA](#-escolha-das-primeiras-chaves-privadas)
     * [Escolha das primeiras chaves privadas](#-método-rsa)
     * [Definindo as chaves públicas](#-definindo-as-chaves-públicas)
@@ -34,7 +34,7 @@ O arquivo *app.py* é a raiz do projeto, responsável por dar início a aplicaç
 
 ## 🖱️ template/_home.html
 
-Apresenta, no main da aplicação, uma mensagem de boas vindas. 
+Apresenta, no main da aplicação, uma mensagem de boas-vindas. 
 <br><br>
 
 ## 🖱️ template/_rsa.py
@@ -43,33 +43,33 @@ Irá utilizar os decoradores `rsa/criptografar`  e `rsa/descriptografar`  para c
 <br><br>
 
 # 🔐 Cifra de Vigenère
-Irá utilizar uma serie de deslocamentos alfabéticos, baseado em única chave. Trata-se, portante, de um método de criptografia de chave simétrica.
+Irá utilizar uma serie de deslocamentos alfabéticos, baseado em única chave. Trata-se, portanto, de um método de criptografia de chave simétrica.
 <br><br>
 
 ## 🔑 Construção da tabula recta
 
-Um arquivo csv (_file_virgenere.csv_ no programa) contem todos os caracteres possíveis.
+Um arquivo csv (_file_vigerene.csv_ no programa) contem todos os caracteres possíveis.
 
-A função _table_virgenere()_ irá contruir uma tabela e utilizar esses caracteres como cabeçalhos de linhas e colunas. Os valores da tabela serãos os mesmos caracteres, mas o vetor de _B_ será o vetor de _A_, com a alteração de que a primeris posição de _A_ passa a ser a última posição de _B_. 
+A função _table_vigerene()_ irá construir uma tabela e utilizar esses caracteres como cabeçalhos de linhas e colunas. Os valores da tabela serão os mesmos caracteres, mas o vetor de _B_ será o vetor de _A_, com a alteração de que a primeira posição de _A_ passa a ser a última posição de _B_. 
 Veja o exemplo abaixo:
    <div align="center">
    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Vigen%C3%A8re_square.svg/800px-Vigen%C3%A8re_square.svg.png" alt="exemplo de uma tabula recta" width="300px" height="300px">
    </div>
 <br><br>
 
-## 🔑 Encriptação e Descriptação de Virgenère
-A função _virgenere_encrypt()_ irá repetir a palavra chave até que ela possua o mesmo tamanho do texto que será criptografado. Cada letra da palavra chave irá servir como indice de linha para cada letra do texto que a ser criptografado, e que também será o índice de coluna.
+## 🔑 Encriptação e decriptação de Virgenère
+A função _vigerene_encrypt()_ irá repetir a palavra chave até que ela possua o mesmo tamanho do texto que será criptografado. Cada letra da palavra chave irá servir como índice de linha para cada letra do texto que a ser criptografado, e que também será o índice de coluna.
 
 # 🔐 Método RSA
 
-Utiliza um conjunto de chaves assimétricas, sendo duas chaves públicas e três chaves privadas. O código das funções utilizadas neste método estão no arquivo *_rsa.py* na pasta raiz do projeto. 
+Utiliza um conjunto de chaves assimétricas, sendo duas chaves públicas e três chaves privadas. O código das funções utilizadas neste método está no arquivo *_rsa.py* na pasta raiz do projeto. 
 <br><br>
 
 ## 🔑 Escolha das primeiras chaves privadas
 
 A encriptação começa a partir da escola de duas chaves privadas, arbitraria, mas precisam ser necessariamente dois números primos. Quanto maior o algarismo, mas difícil se torna a decriptação. 
 
-No código chamaremos essa duas chaves de: 
+No código chamaremos essas duas chaves de: 
 
 ```python
 key_one = 883     # 1ª Chave privada
@@ -85,7 +85,7 @@ A primeira chave pública é dada pelo produto das chaves privadas. No código:
 product_of_keys = key_one * key_two     # Mais conhecido como 1ª Chave pública
 ```
 
-A segunda chave pública também é arbitrária, mas precisa obedecer as seguintes regras:
+A segunda chave pública também é arbitrária, mas precisa obedecer às seguintes regras:
 
 - 1 < *segunda chave pública < φ(n)*
 - m.d.c( *φ(n), segunda chave pública) = 1*

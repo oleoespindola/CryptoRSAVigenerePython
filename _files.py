@@ -13,9 +13,9 @@ def table_ascii() -> list:
     return table_ascii
 
 # ==============================================
-def table_virgenere() -> dict():
+def table_vigerene() -> dict():
     '''
-    Retorna a table de virgenere usando um arquivo que possui apenas uma linha - vetor - de caracteres pré-definidos que poderão ser utilizados na criptografia do texto. 
+    Retorna a table de vigenere usando um arquivo que possui apenas uma linha - vetor - de caracteres pré-definidos que poderão ser utilizados na criptografia do texto. 
     '''
     # Variável que irá recbe o alfabeto pré definido no arquivo 'file_virginiere.csv' e utilizada com índice da linhas e colunas da table.
     alfabet = None
@@ -24,11 +24,11 @@ def table_virgenere() -> dict():
     # Variável que irá recerber o alfabeto deslocado para cada linha da table.
     displaced_alfabet =  list()
 
-    # Variável que irá recever a table de virgenere. 
+    # Variável que irá recever a table de vigenere. 
     table = dict()
 
     # Abre o arquivo, remove os parágrados, depois atribui a variável alfabet.
-    with open('file_virgenere.csv') as characters:
+    with open('file_vigenere.csv') as characters:
         for line in characters:
             for char in line:
                 char = char.replace('[' , '')
@@ -56,12 +56,12 @@ def table_virgenere() -> dict():
 
     return table
 
-def alfabet_of_virgenere() -> list:
+def alfabet_of_vigerene() -> list:
     '''
-    Retorna uma lista com os caracteres do cabeçalho da tabela de virgenere
+    Retorna uma lista com os caracteres do cabeçalho da tabela de vigenere
     '''
 
-    with open('file_virgenere.csv') as characters:
+    with open('file_vigerene.csv') as characters:
         for line in characters:
             for char in line:
                 char = char.replace('[', '')
