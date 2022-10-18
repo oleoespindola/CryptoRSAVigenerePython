@@ -13,7 +13,7 @@ def table_ascii() -> list:
     return table_ascii
 
 # ==============================================
-def table_vigerene() -> dict():
+def table_vigenere() -> dict():
     '''
     Retorna a table de vigenere usando um arquivo que possui apenas uma linha - vetor - de caracteres pré-definidos que poderão ser utilizados na criptografia do texto. 
     '''
@@ -56,12 +56,12 @@ def table_vigerene() -> dict():
 
     return table
 
-def alfabet_of_vigerene() -> list:
+def alfabet_of_vigenere() -> list:
     '''
     Retorna uma lista com os caracteres do cabeçalho da tabela de vigenere
     '''
 
-    with open('file_vigerene.csv') as characters:
+    with open('file_vigenere.csv') as characters:
         for line in characters:
             for char in line:
                 char = char.replace('[', '')

@@ -111,11 +111,3 @@ def rsa_decrypt(text:str, key_one:int) -> str:
         text_result = 'Desculpe, mas não consegui entender o seu texto 😢'
 
     return text_result
-
-
-keys = public_key()
-
-print(
-    rsa_decrypt('868358, 452174, 868358, 547024, 868358, 240371, 101094, 868358, 101094, 473454, 868358, 350269, 527973, 101094, 350269, 84085, 114496',
-    key_one=keys[0])
-)

@@ -48,9 +48,9 @@ Irá utilizar uma serie de deslocamentos alfabéticos, baseado em única chave. 
 
 ## 🔑 Construção da tabula recta
 
-Um arquivo csv (_file_vigerene.csv_ no programa) contem todos os caracteres possíveis.
+Um arquivo csv (_file_vigenere.csv_ no programa) contem todos os caracteres possíveis.
 
-A função _table_vigerene()_ irá construir uma tabela e utilizar esses caracteres como cabeçalhos de linhas e colunas. Os valores da tabela serão os mesmos caracteres, mas o vetor de _B_ será o vetor de _A_, com a alteração de que a primeira posição de _A_ passa a ser a última posição de _B_. 
+A função _table_vigenere()_ irá construir uma tabela e utilizar esses caracteres como cabeçalhos de linhas e colunas. Os valores da tabela serão os mesmos caracteres, mas o vetor de _B_ será o vetor de _A_, com a alteração de que a primeira posição de _A_ passa a ser a última posição de _B_. 
 Veja o exemplo abaixo:
    <div align="center">
    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Vigen%C3%A8re_square.svg/800px-Vigen%C3%A8re_square.svg.png" alt="exemplo de uma tabula recta" width="300px" height="300px">
@@ -58,7 +58,7 @@ Veja o exemplo abaixo:
 <br><br>
 
 ## 🔑 Encriptação e decriptação de Virgenère
-A função _vigerene_encrypt()_ irá repetir a palavra chave até que ela possua o mesmo tamanho do texto que será criptografado. Cada letra da palavra chave irá servir como índice de linha para cada letra do texto que a ser criptografado, e que também será o índice de coluna.
+A função _vigenere_encrypt()_ irá repetir a palavra chave até que ela possua o mesmo tamanho do texto que será criptografado. Cada letra da palavra chave irá servir como índice de linha para cada letra do texto que a ser criptografado, e que também será o índice de coluna.
 
 # 🔐 Método RSA
 

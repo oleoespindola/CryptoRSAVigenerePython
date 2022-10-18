@@ -1,8 +1,8 @@
-from _files import table_vigerene, alfabet_of_vigerene
+from _files import table_vigenere, alfabet_of_vigenere
 
-table = table_vigerene()
+table = table_vigenere()
 
-def vigerene_encrypt(text:str, key_word:str) -> str:
+def vigenere_encrypt(text:str, key_word:str) -> str:
     '''
     Distribui para cada letra do texto uma letra da palavra chave. Depois, na linha cujo o índice corresponde ao resultado da busca e coluna, que  sera a letra a ser criptografada, encontra o resultado correspondente.
     '''
@@ -23,9 +23,9 @@ def vigerene_encrypt(text:str, key_word:str) -> str:
     
     return encrypted_text
 
-def vigerene_decrypt(text:str, key_word:str) -> str:
+def vigenere_decrypt(text:str, key_word:str) -> str:
     '''
-    Processo inverso ao da função 'vigerene_encrypt'.
+    Processo inverso ao da função 'vigenere_encrypt'.
     '''
 
     # Desloca a posiçao/letra da chave a medida que a decriptaçao avança
@@ -35,7 +35,7 @@ def vigerene_decrypt(text:str, key_word:str) -> str:
     decrypt_text = ''
 
     # Recebe ocabechalho da tabela de vigenere
-    characters = alfabet_of_vigerene()
+    characters = alfabet_of_vigenere()
 
     try:
         for letter_in_text in text: 
