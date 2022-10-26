@@ -2,20 +2,32 @@
 
 {% block body %}
 
-<div class="container-fluid text-light p-3">
-    <h1 class="text-center fs-3">Bem vindo ao PyCripto, projeto de criptografia em python.</h1>
+<div class="container-fluid p-3">
+    <h1 class="text-center fs-3">Bem-vindo ao PyCripto!</h1>
 
-    <p>Este projeto tem como objetivo apresentar duas técnicas de critografia de texto diferentes.</p>
+    <h2 class="fs-5">O objetivo deste projeto é apresentar duas técnicas de criptografia diferentes.</h2>
 
-    <p>Todo o código fonte da aplicação está disponível <a class="navbar-brand text-warning" href="https://www.github.com/HiLeomoreira/PyCripto" target="_blank">aqui</a></p>
-</div>
+    <p>Criptografias são técnicas que podem proteger informações, de modo que apenas um emissor e um receptor consigam entender essas informações</p>
 
-<div class="container text-center p-2">
-    <div class="row justify-content-end">
-        <div class="col-4">
-            <a href="https://brasil.un.org/pt-br/sdgs" target="_blank"><img src="https://media.giphy.com/media/RXJXrVNAOOCsTzBOU5/giphy.gif" alt="giphy: árvore balançando" width="150px" height="150px"></a>
+    <p>Neste projeto iremos apresentar duas técnicas de encriptação diferentes: Cifra de Vigenère e RSA.</p>
+
+    <h3 class="fs-6">Cifra de Vigenère</h3>
+    <p>Este método consiste em vários deslocamentos alfabéticos que ocorrerão de acordo com uma chave pré-determinada, ou seja, tanto o emissor quanto o receptor precisam ter conhecimento prévio da chave.</p>
+
+    <p>Por exemplo, digamos que eu queira enviar a mensagem "ECOLOGICAMENTE SUSTENTAVEL", com a chave "VERDE", usando um alfabeto de 26 letras, o resultado seria "ZGSPSKMGEQIRXIWYWXIRXEZIP". Na prática esse conjunto de caracteres não nos diz muita coisa, não é? Mas o objetivo é exatamente esse: impedir que outras pessoas consigam entender a frase.</p>
+
+    <h3 class="fs-6">RSA</h3>
+
+    <p>Este método é mais seguro que o anterior, pois emissor e receptor possuem um conjunto de chaves numéricas diferentes. Quanto maior o valor das chaves mais difícil será o processo de encriptação e decriptação, portanto é um método mais lento que o anterior</p>
+
+    <div class="d-flex flex-column justify-content-center ms-1">
+        <h2 class="fs-5 text-center">Por que não testar os métodos para entender melhor o funcionamento deles?</h2>
+        <div class="d-flex justify-content-evenly">
+            <a href="/vigenere"><button class="btn btn-success" style="width: 150px">Cifra de Vigenère</button></a>
+            <a href="/rsa"><button class="btn btn-success" style="width: 150px">Método RSA</button></a>
         </div>
     </div>
+
 </div>
 
 {% endblock %}

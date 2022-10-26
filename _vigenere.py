@@ -10,18 +10,19 @@ def vigenere_encrypt(text:str, key_word:str) -> str:
     encrypted_text = ''
     index_key_word = 0
 
-    if key_word == '':
-        return 'Desculpe, mas não consigo critpgrafar isso 😿'
-
-    for letter_text in text:
-        encrypted_text += table[key_word[index_key_word]][letter_text]
+    try:
+        for letter_text in text:
+            encrypted_text += table[key_word[index_key_word]][letter_text]
 
         # Desoloca a letra da chave
         index_key_word =+ 1 
         if index_key_word == len(key_word):
             index_key_word = 0
     
-    return encrypted_text
+        return encrypted_text
+
+    except:
+        return 'Desculpe, mas não consegui descriptografar isso 😿'
 
 def vigenere_decrypt(text:str, key_word:str) -> str:
     '''
@@ -47,9 +48,7 @@ def vigenere_decrypt(text:str, key_word:str) -> str:
                     count_key_letter =+ 1 
                     if count_key_letter == len(key_word):
                         count_key_letter = 0
-
                     break
+        return decrypt_text
     except:
-        decrypt_text = 'Desculpe, mas não consegui descriptografar isso 😿'
-
-    return decrypt_text
+        return 'Desculpe, mas não consegui descriptografar isso 😿'

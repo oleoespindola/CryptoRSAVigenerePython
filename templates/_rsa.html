@@ -2,56 +2,84 @@
 
 {% block body %}
 
-<div class="container">
+<div class="d-flex flex-column">
     <!-- Título -->
-    <div class="container text-center p-3">
-        <h1 class="text-center text-warning fs-3">Método RSA</h1>
+    <div class="text-center p-3">
+        <h1 class="ext-center text-warning fs-3">Método RSA</h1>
+
+        <p>
+            Neste método você não precisa digitar uma chave. Basta digitar o seu texto para criptografar.
+        </p>
     </div>
 
+
     <!-- Sessão de criptografia -->
-    <section class="container text-left p-1">
-        <form action="/rsa/criptografar" method="post">
-            <div class="container">
-                <div class="row align-items-start">
-                    <div class="col">
-                        <!--Input do usuário para crioptografar-->
-                        <div class="form-floating">
-                            <input type="text" name="decrypt_text" class="form-control" placeholder="Seu texto aqui..."
-                                id="floatingTextarea_encryptText" style="height: 100px"></input>
-                            <label for="floatingTextarea_encryptText">Seu texto aqui...</label>
+    <form action="/rsa/criptografar" method="post" class="">
+        <table class="table table-hover">
+            <tr>
+                <td>
+                    <!-- Input -->
+                    <div class="form-floating">
+                        <input type="text" name="decrypt_text" class="form-control" placeholder="Digite seu texto aqui..."
+                            id="floatingTextarea_encryptText" style="height: 100px"></input>
+                        <label for="floatingTextarea_encryptText">Digite seu texto aqui...</label>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <div class="">
+                            <!-- Output -->
+                            <textarea readonly placeholder="Irei exibir, aqui, o seu texto criptografado."''
+                                class="form-control" style="height: 100px; resize: none">{{ encrypted_text }}</textarea>
                         </div>
-                        <input type="submit" value="Criptografar" class="btn btn-warning p-2 m-2">
                     </div>
-                    <div class="col">
-                        <!-- Output -->
-                        <textarea type="text" class="form-control bg-dark text-light" style="height: 100px">{{ encrypted_text }}</textarea>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </section>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Criptografar" class="btn btn-warning" style="height: 40px; width: 150px">
+                </td>
+                <td>
+                    <div></div>
+                </td>
+            </tr>
+        </table>
+    </form>
+
 
     <!-- Sessão de descriptografia -->
-    <section class="container text-left p-1">
-        <form action="/rsa/descriptografar" method="post">
-            <div class="container">
-                <div class="row align-items-start">
-                    <div class="col">
-                        <!--Input do usuário para crioptografar-->
-                        <div class="form-floating">
-                            <input type="text" name="encrypt_text" class="form-control" placeholder="Seu texto codificado, separado por virgula..."
-                                id="floatingTextarea_decryptText" style="height: 100px"></input>
-                            <label for="floatingTextarea_decryptText">Seu texto codificado, separado por virgula...</label>
-                        </div>
-                        <input type="submit" value="Descriptografar" class="btn btn-success p-2 m-2">
+    <form action="/rsa/descriptografar" method="post">
+        <table class="table table-hover">
+            <tr>
+                <td>   
+                    <!-- Input -->
+                    <div class="form-floating">
+                        <input type="text" name="encrypt_text" class="form-control"
+                            placeholder="Seu texto codificado, separado por virgula..."
+                            id="floatingTextarea_decryptText" style="height: 100px"></input>
+                        <label for="floatingTextarea_decryptText">Seu texto codificado, separado por
+                            virgula...</label>
+                </td>
+                <td>
+                    <div>
+                        <!-- Output -->
+                        <textarea readonly placeholder="Irei exibir, aqui, o seu texto descriptografado."
+                            class="form-control bg-ligth"
+                            style="height: 100px; resize: none">{{ decrypted_text }}</textarea>
                     </div>
-                    <div class="col">
-                        <textarea type="text" class="form-control bg-dark text-light" style="height: 100px">{{ decrypted_text }}</textarea>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </section>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Descriptografar" class="btn btn-success"
+                    style="height: 40px; width: 150px">
+                </td>
+                <td>
+                    <div></div>
+                </td>
+            </tr>
+        </table>
+    </form>
 
 </div>
 

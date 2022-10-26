@@ -2,58 +2,102 @@
 
 {% block body %}
 
-<div class="container">
+<div class="d-flex flex-column">
     <!-- Título -->
-    <div class="container text-center p-3">
+    <div class="text-center p-3">
         <h1 class="text-center text-warning fs-3">Método de Vigenère</h1>
+
+        <p>
+            Para criptografar o seu texto será <strong>nescessário escolher uma chave</strong> também. Para
+            descriptografar,
+            é nescessário utilizar a mesma chave.
+        </p>
+        <p>
+            Seu texto e chave <strong>não poderão conter números ou caracteres especiais</strong>.
+        </p>
+
     </div>
 
+
     <!-- Sessão de criptografia -->
-    <section class="container text-left p-1">
-        <form action="/vigenere/criptografar" method="post">
-            <div class="container">
-                <div class="row align-items-start">
-                    <div class="col">
-                        <!--Input do usuário para crioptografar-->
-                        <div class="form-floating">
-                            <input type="text" name="decrypt_text" class="form-control" placeholder="Seu texto aqui..."
-                                id="floatingTextarea_EncryptText" style="height: 100px"></input>
-                            <label for="floatingTextarea_EncryptText">Seu texto aqui...</label>
+    <form action="/vigenere/criptografar" method="post" class="">
+        <table class="table table-hover">
+            <tr>
+                <td>
+                    <!-- Input -->
+                    <div class="form-floating">
+                        <input type="text" name="decrypt_text" class="form-control"
+                            placeholder="Digite seu texto aqui..." id="floatingTextarea_EncryptText"
+                            style="height: 100px"></input>
+                        <label for="floatingTextarea_EncryptText">Digite seu texto aqui...</label>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <div class="">
+                            <!-- Output -->
+                            <textarea readonly placeholder="Irei exibir, aqui, o seu texto criptografado."''
+                                class="form-control" style="height: 100px; resize: none">{{ encrypted_text }}</textarea>
                         </div>
-                        <input type="text" name="key_encrypt" value="{{ key_word }}" class="btn btn-warning p-2 m-2" placeholder="Sua chave aqui...">
-                        <input type="submit" value="Criptografar" class="btn btn-warning p-2 m-2">
                     </div>
-                    <div class="col">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- Input -->
+                    <input type="text" name="key_encrypt" value="{{ key_word }}" class="form-control"
+                        placeholder="Sua chave aqui..." style="height: 40px">
+                </td>
+                <td>
+                    <div>
                         <!-- Output -->
-                        <textarea type="text" class="form-control bg-dark text-light" style="height: 100px">{{ encrypted_text }}</textarea>
+                        <input type="submit" value="Criptografar" class="btn btn-warning"
+                            style="height: 40px; width: 150px">
                     </div>
-                </div>
-            </div>  
-        </form>
-    </section>
+                </td>
+            </tr>
+        </table>
+    </form>
+
 
     <!-- Sessão de descriptografia -->
-    <section class="container text-left p-1">
-        <form action="/vigenere/descriptografar" method="post">
-            <div class="container">
-                <div class="row align-items-start">
-                    <div class="col">
-                        <!--Input do usuário para crioptografar-->
-                        <div class="form-floating">
-                            <input type="text" name="encrypt_text" class="form-control" placeholder="Seu texto codificado, separado por virgula..."
-                                id="floatingTextarea_DecryptText" style="height: 100px"></input>
-                            <label for="floatingTextarea_DecryptText">Seu texto codificado aqui...</label>
-                        </div>
-                        <input type="text" name="key_decrypt" value="{{ key_word }}" class="btn btn-success text-light p-2 m-2" placeholder="Sua chave aqui...">
-                        <input type="submit" value="DesCriptografar" class="btn btn-success p-2 m-2">
+    <form action="/vigenere/descriptografar" method="post">
+        <table class="table table-hover">
+            <tr>
+                <td>
+                    <!-- Input -->
+                    <div class="form-floating">
+                        <input type="text" name="encrypt_text" class="form-control"
+                            placeholder="Cole aqui o seu texto criptografado..." id="floatingTextarea_DecryptText"
+                            style="height: 100px"></input>
+                        <label for="floatingTextarea_DecryptText">Cole aqui o seu texto criptografado...</label>
                     </div>
-                    <div class="col">
-                        <textarea type="text" class="form-control bg-dark text-light" style="height: 100px">{{ decrypted_text }}</textarea>
+                </td>
+                <td>
+                    <div>
+                        <textarea readonly placeholder="Irei exibir, aqui, o seu texto descriptografado."
+                            class="form-control bg-ligth"
+                            style="height: 100px; resize: none">{{ decrypted_text }}</textarea>
                     </div>
-                </div>
-            </div>
-        </form>
-    </section>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <!-- Input -->
+                        <input type="text" name="key_decrypt" value="{{ key_word }}" class="form-control"
+                            placeholder="Sua chave aqui...">
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <input type="submit" value="DesCriptografar" class="btn btn-success"
+                            style="height: 40px; width: 150px">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
 
 </div>
 
