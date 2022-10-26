@@ -63,7 +63,6 @@ Veja o exemplo abaixo:
 
    A função _vigenere_encrypt()_ irá repetir a palavra chave até que ela possua o mesmo tamanho do texto que será criptografado. Cada letra da palavra chave servirá como índice de linha para cada letra do texto que a ser criptografado, as letras do texo a ser criptografa serão os índeces de coluna.
 <br><br>
---
 
 ## 3- Método RSA
 
@@ -94,7 +93,7 @@ product_of_keys = key_one * key_two     # Mais conhecido como 1ª Chave pública
 
    - 1 < *segunda chave pública < φ(n)*
    - m.d.c( *φ(n), segunda chave pública) = 1*
-   - *segunda chave pública) =* número primo
+   - *segunda chave pública =* número primo
 
    A função *public_key()* será responsável por retornar uma lista com as duas chaves públicas de acordo com a regras acima. 
 <br><br>
