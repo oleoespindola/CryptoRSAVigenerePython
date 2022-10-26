@@ -38,8 +38,6 @@ O objetivo deste projeto é mostrar ao usuário duas apicações de criptografia
    Apresenta no main da aplicação, uma mensagem de boas-vindas e um texo que explica o objetivo do projeto e como ele irá funcionar. 
 <br><br>
 
---
-
 ## 2. - Cifra de Vigenère
 
    Irá utilizar uma serie de deslocamentos alfabéticos (assim como na Cifra de César) baseado em única chave, tratando-se, portanto, de um método de criptografia de chave simétrica.
