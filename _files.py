@@ -13,7 +13,7 @@ def table_ascii() -> list:
     return table_ascii
 
 # ==============================================
-def table_vigenere() -> dict():
+def table_vigenere() -> dict:
     '''
     Retorna a table de vigenere usando um arquivo que possui apenas uma linha - vetor - de caracteres pré-definidos que poderão ser utilizados na criptografia do texto. 
     '''
