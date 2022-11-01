@@ -1,11 +1,11 @@
-def table_ascii() -> list:
+def table_rsa() -> list:
     '''
         Retorna a lista de caracteres da table ASCII
     '''
 
     table_ascii = list()
 
-    with open('file_ascii.csv') as alfabet:
+    with open('file_rsa.csv') as alfabet:
         for line in alfabet:
             line = line.replace('\n', '')
             table_ascii.append(line)            
