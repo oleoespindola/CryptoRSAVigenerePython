@@ -110,3 +110,8 @@ A formula da encriptação é *'x' = ('Número da letra ** '2ª Chave pública')
 
 A fórmula da decriptação é *'x' = ('Número criptografado ** '3ª chave privada') % '1ª Chave pública’* e será dada pela function *descriptografar()*
 <br><br>
+
+### Colaboração e sugestões de melhorias
+O código está aberto e disponível para colaboração e sugestões de melhorias. Sinta-se livre para enviar pull requests com modificações e correções.
+
+Qualquer dúvida ou sugestão, não hesite em entrar em contato!
