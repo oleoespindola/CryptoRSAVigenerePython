@@ -1,4 +1,4 @@
-# <img src="https://media.giphy.com/media/LMt9638dO8dftAjtco/giphy.gif" width="30px"> PyCripto
+# <img src="https://media.giphy.com/media/LMt9638dO8dftAjtco/giphy.gif" width="30px"> Criptografia em Python
 
 O objetivo deste projeto é mostrar ao usuário duas apicações de criptografia diferentes: **cifra de Vigenère** e o método **RSA**.  
 <br>
